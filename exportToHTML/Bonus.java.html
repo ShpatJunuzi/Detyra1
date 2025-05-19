@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Bonus.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Bonus.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Bonus </span><span class="s2">{</span>
+    <span class="s0">private static </span><span class="s1">String</span><span class="s2">[] </span><span class="s1">studentet</span><span class="s2">;</span>
+    <span class="s0">private static byte</span><span class="s2">[] </span><span class="s1">notat</span><span class="s2">;</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">Scanner scanner </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Miresevini ne aplikacionin 'Noto Studentin'!&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Sa studente deshironi te regjistroni? &quot;</span><span class="s2">);</span>
+        <span class="s0">int </span><span class="s1">numriStudenteve </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+        <span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">(); </span><span class="s4">// Pastro buffer-in</span>
+
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">numriStudenteve </span><span class="s2">&lt;= </span><span class="s5">0</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Numri i studentëve duhet të jetë më i madh se 0.&quot;</span><span class="s2">);</span>
+            <span class="s0">return</span><span class="s2">;</span>
+        <span class="s2">}</span>
+
+        <span class="s1">studentet </span><span class="s2">= </span><span class="s0">new </span><span class="s1">String</span><span class="s2">[</span><span class="s1">numriStudenteve</span><span class="s2">];</span>
+        <span class="s1">notat </span><span class="s2">= </span><span class="s0">new byte</span><span class="s2">[</span><span class="s1">numriStudenteve</span><span class="s2">];</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Le te fillojm me regjistrimin e studentve dhe notave te tyre:&quot;</span><span class="s2">);</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s0">int </span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">numriStudenteve</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Vendos emrin e studentit &quot; </span><span class="s2">+ (</span><span class="s1">i </span><span class="s2">+ </span><span class="s5">1</span><span class="s2">) + </span><span class="s3">&quot;: &quot;</span><span class="s2">);</span>
+            <span class="s1">studentet</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] = </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Vendos noten e studentit &quot; </span><span class="s2">+ </span><span class="s1">studentet</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] + </span><span class="s3">&quot; (0-10): &quot;</span><span class="s2">);</span>
+            <span class="s1">notat</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] = </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextByte</span><span class="s2">();</span>
+            <span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+        <span class="s2">}</span>
+
+        <span class="s0">while </span><span class="s2">(</span><span class="s0">true</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Cka deshironi te beni tani?&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;1. Shiko te gjithe studentet&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;2. Shiko te gjitha notat&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;3. Ndrysho nje student&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;4. Dil nga aplikacioni&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Zgjedhja juaj: &quot;</span><span class="s2">);</span>
+            <span class="s0">int </span><span class="s1">zgjedhja </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+            <span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+
+            <span class="s0">switch </span><span class="s2">(</span><span class="s1">zgjedhja</span><span class="s2">) {</span>
+                <span class="s0">case </span><span class="s5">1</span><span class="s2">:</span>
+                    <span class="s1">shfaqStudentet</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s5">2</span><span class="s2">:</span>
+                    <span class="s1">shfaqNotat</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s5">3</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Vendos indeksin e studentit qe deshiron te ndryshosh (0-&quot; </span><span class="s2">+ (</span><span class="s1">numriStudenteve </span><span class="s2">- </span><span class="s5">1</span><span class="s2">) + </span><span class="s3">&quot;): &quot;</span><span class="s2">);</span>
+                    <span class="s0">int </span><span class="s1">indeksi </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                    <span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+
+                    <span class="s0">if </span><span class="s2">(</span><span class="s1">indeksi </span><span class="s2">&gt;= </span><span class="s5">0 </span><span class="s2">&amp;&amp; </span><span class="s1">indeksi </span><span class="s2">&lt; </span><span class="s1">numriStudenteve</span><span class="s2">) {</span>
+                        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Vendos emrin e ri te studentit: &quot;</span><span class="s2">);</span>
+                        <span class="s1">String emriRi </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+
+                        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Vendos noten e re: &quot;</span><span class="s2">);</span>
+                        <span class="s0">byte </span><span class="s1">notaRe </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextByte</span><span class="s2">();</span>
+                        <span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">(); </span><span class="s4">// Pastro buffer-in</span>
+
+                        <span class="s1">ndryshoStudentin</span><span class="s2">(</span><span class="s1">indeksi</span><span class="s2">, </span><span class="s1">emriRi</span><span class="s2">, </span><span class="s1">notaRe</span><span class="s2">);</span>
+                        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Ndryshimi u krye me sukses!&quot;</span><span class="s2">);</span>
+                    <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Indeksi i pavlefshem. Ju lutem provoni perseri.&quot;</span><span class="s2">);</span>
+                    <span class="s2">}</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s5">4</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Faleminderit qe perdoret aplikacionin 'Noto Studentin'. Mirupafshim! &lt;3&quot;</span><span class="s2">);</span>
+                    <span class="s1">scanner</span><span class="s2">.</span><span class="s1">close</span><span class="s2">();</span>
+                    <span class="s0">return</span><span class="s2">;</span>
+                <span class="s0">default</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Zgjedhje e pavlefshme. Ju lutem provoni perseri.&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">private static void </span><span class="s1">shfaqStudentet</span><span class="s2">() {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Lista e studenteve:&quot;</span><span class="s2">);</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s0">int </span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">studentet</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">i </span><span class="s2">+ </span><span class="s3">&quot;. &quot; </span><span class="s2">+ </span><span class="s1">studentet</span><span class="s2">[</span><span class="s1">i</span><span class="s2">]);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">private static void </span><span class="s1">shfaqNotat</span><span class="s2">() {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Lista e notave:&quot;</span><span class="s2">);</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s0">int </span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">notat</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Studenti &quot; </span><span class="s2">+ </span><span class="s1">studentet</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] + </span><span class="s3">&quot;: &quot; </span><span class="s2">+ </span><span class="s1">notat</span><span class="s2">[</span><span class="s1">i</span><span class="s2">]);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">private static void </span><span class="s1">ndryshoStudentin</span><span class="s2">(</span><span class="s0">int </span><span class="s1">indeksi</span><span class="s2">, </span><span class="s1">String emriRi</span><span class="s2">, </span><span class="s0">byte </span><span class="s1">notaRe</span><span class="s2">) {</span>
+        <span class="s1">studentet</span><span class="s2">[</span><span class="s1">indeksi</span><span class="s2">] = </span><span class="s1">emriRi</span><span class="s2">;</span>
+        <span class="s1">notat</span><span class="s2">[</span><span class="s1">indeksi</span><span class="s2">] = </span><span class="s1">notaRe</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

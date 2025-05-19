@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Detyra02.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Detyra02.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Detyra02 </span><span class="s2">{</span>
+    <span class="s0">private static </span><span class="s1">String</span><span class="s2">[] </span><span class="s1">kenget </span><span class="s2">= </span><span class="s0">new </span><span class="s1">String</span><span class="s2">[</span><span class="s3">10</span><span class="s2">];</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">Scanner scanner </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+        <span class="s0">int </span><span class="s1">zgjedhja</span><span class="s2">;</span>
+
+        <span class="s0">do </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Zgjidhni nje opsion:&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;1. Krijo nje kenge&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;2. Shfaq nje kenge&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;3. Shfaq te gjitha kenget&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;4. Ndrysho kengen&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;5. Fshij kengen&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;6. Dil nga aplikacioni&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Zgjedhja juaj: &quot;</span><span class="s2">);</span>
+            <span class="s1">zgjedhja </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+            <span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+
+            <span class="s0">switch </span><span class="s2">(</span><span class="s1">zgjedhja</span><span class="s2">) {</span>
+                <span class="s0">case </span><span class="s3">1</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Vendos indeksin (0-9) per kengen e re: &quot;</span><span class="s2">);</span>
+                    <span class="s0">int </span><span class="s1">indexKrijo </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                    <span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Vendose emrin e kenges: &quot;</span><span class="s2">);</span>
+                    <span class="s1">String emriKrijo </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+                    <span class="s1">krijokenge</span><span class="s2">(</span><span class="s1">indexKrijo</span><span class="s2">, </span><span class="s1">emriKrijo</span><span class="s2">);</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s3">2</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Vendos indeksin (0-9) per te shfaqur kengen: &quot;</span><span class="s2">);</span>
+                    <span class="s0">int </span><span class="s1">indexShfaq </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                    <span class="s1">shfaqKenge</span><span class="s2">(</span><span class="s1">indexShfaq</span><span class="s2">);</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s3">3</span><span class="s2">:</span>
+                    <span class="s1">shfaqTeGjithaKenget</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s3">4</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Vendos indeksin (0-9) per te ndryshuar kengen: &quot;</span><span class="s2">);</span>
+                    <span class="s0">int </span><span class="s1">indexNdrysho </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                    <span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Vendos emrin e ri të këngës: &quot;</span><span class="s2">);</span>
+                    <span class="s1">String emriRi </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+                    <span class="s1">ndryshoKenge</span><span class="s2">(</span><span class="s1">indexNdrysho</span><span class="s2">, </span><span class="s1">emriRi</span><span class="s2">);</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s3">5</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Vendos indeksin (0-9) per te fshire kengen: &quot;</span><span class="s2">);</span>
+                    <span class="s0">int </span><span class="s1">indexFshij </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                    <span class="s1">fshijKenge</span><span class="s2">(</span><span class="s1">indexFshij</span><span class="s2">);</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s3">6</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Po dilni nga aplikacioni...&quot;</span><span class="s2">);</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">default</span><span class="s2">:</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Zgjedhje e pavlefshme. Ju lutem provoni perseri.&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">while </span><span class="s2">(</span><span class="s1">zgjedhja </span><span class="s2">!= </span><span class="s3">6</span><span class="s2">);</span>
+
+        <span class="s1">scanner</span><span class="s2">.</span><span class="s1">close</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">krijokenge</span><span class="s2">(</span><span class="s0">int </span><span class="s1">index</span><span class="s2">, </span><span class="s1">String emri</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">index </span><span class="s2">&gt;= </span><span class="s3">0 </span><span class="s2">&amp;&amp; </span><span class="s1">index </span><span class="s2">&lt; </span><span class="s1">kenget</span><span class="s2">.</span><span class="s1">length</span><span class="s2">) {</span>
+            <span class="s1">kenget</span><span class="s2">[</span><span class="s1">index</span><span class="s2">] = </span><span class="s1">emri</span><span class="s2">;</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Kenga u krijua me sukses!&quot;</span><span class="s2">);</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Indeksi i pavlefshem. Ju lutem perdorni nje indeks midis 0 dhe 9.&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">shfaqKenge</span><span class="s2">(</span><span class="s0">int </span><span class="s1">index</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">index </span><span class="s2">&gt;= </span><span class="s3">0 </span><span class="s2">&amp;&amp; </span><span class="s1">index </span><span class="s2">&lt; </span><span class="s1">kenget</span><span class="s2">.</span><span class="s1">length </span><span class="s2">&amp;&amp; </span><span class="s1">kenget</span><span class="s2">[</span><span class="s1">index</span><span class="s2">] != </span><span class="s0">null</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Kenga ne indeksin &quot; </span><span class="s2">+ </span><span class="s1">index </span><span class="s2">+ </span><span class="s4">&quot;: &quot; </span><span class="s2">+ </span><span class="s1">kenget</span><span class="s2">[</span><span class="s1">index</span><span class="s2">]);</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Nuk ka kenge ne kete indeks ose indeksi eshte i pavlefshem.&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">shfaqTeGjithaKenget</span><span class="s2">() {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Lista e te gjitha kengeve:&quot;</span><span class="s2">);</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s0">int </span><span class="s1">i </span><span class="s2">= </span><span class="s3">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">kenget</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">kenget</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] != </span><span class="s0">null</span><span class="s2">) {</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">i </span><span class="s2">+ </span><span class="s4">&quot;. &quot; </span><span class="s2">+ </span><span class="s1">kenget</span><span class="s2">[</span><span class="s1">i</span><span class="s2">]);</span>
+            <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">i </span><span class="s2">+ </span><span class="s4">&quot;. (Bosh)&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">ndryshoKenge</span><span class="s2">(</span><span class="s0">int </span><span class="s1">index</span><span class="s2">, </span><span class="s1">String emriRi</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">index </span><span class="s2">&gt;= </span><span class="s3">0 </span><span class="s2">&amp;&amp; </span><span class="s1">index </span><span class="s2">&lt; </span><span class="s1">kenget</span><span class="s2">.</span><span class="s1">length </span><span class="s2">&amp;&amp; </span><span class="s1">kenget</span><span class="s2">[</span><span class="s1">index</span><span class="s2">] != </span><span class="s0">null</span><span class="s2">) {</span>
+            <span class="s1">kenget</span><span class="s2">[</span><span class="s1">index</span><span class="s2">] = </span><span class="s1">emriRi</span><span class="s2">;</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Kenga u ndryshua me sukses!&quot;</span><span class="s2">);</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Nuk ka kenge ne kete indeks ose indeksi eshte i pavlefshem.&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">fshijKenge</span><span class="s2">(</span><span class="s0">int </span><span class="s1">index</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">index </span><span class="s2">&gt;= </span><span class="s3">0 </span><span class="s2">&amp;&amp; </span><span class="s1">index </span><span class="s2">&lt; </span><span class="s1">kenget</span><span class="s2">.</span><span class="s1">length </span><span class="s2">&amp;&amp; </span><span class="s1">kenget</span><span class="s2">[</span><span class="s1">index</span><span class="s2">] != </span><span class="s0">null</span><span class="s2">) {</span>
+            <span class="s1">kenget</span><span class="s2">[</span><span class="s1">index</span><span class="s2">] = </span><span class="s0">null</span><span class="s2">;</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Kenga u fshi me sukses!&quot;</span><span class="s2">);</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Nuk ka kenge ne kete indeks ose indeksi eshte i pavlefshem.&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
